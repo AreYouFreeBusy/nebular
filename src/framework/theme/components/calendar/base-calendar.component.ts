@@ -4,7 +4,7 @@
  * Licensed under the MIT License. See License.txt in the project root for license information.
  */
 
-import { Component, EventEmitter, HostBinding, Input, OnInit, Output, Type } from '@angular/core';
+import { Component, EventEmitter, HostBinding, Input, OnInit, Output, TemplateRef, Type } from '@angular/core';
 
 import { NbCalendarYearModelService } from '../calendar-kit/services/calendar-year-model.service';
 import {
@@ -27,7 +27,6 @@ import { convertToBoolProperty, NbBooleanInput } from '../helpers';
   templateUrl: './base-calendar.component.html',
 })
 export class NbBaseCalendarComponent<D, T> implements OnInit {
-
   /**
    * Defines if we should render previous and next months
    * in the current month view.
@@ -118,14 +117,16 @@ export class NbBaseCalendarComponent<D, T> implements OnInit {
   @Input() firstDayOfWeek: number | undefined;
 
   /**
+   * A custom template to use to replace the navigation in the header
+   */
+  @Input() customNavigationTemplate: TemplateRef<any>;
+
+  /**
    * Emits date when selected.
    * */
   @Output() dateChange: EventEmitter<T> = new EventEmitter();
 
-  constructor(
-    protected dateService: NbDateService<D>,
-    protected yearModelService: NbCalendarYearModelService<D>,
-  ) {}
+  constructor(protected dateService: NbDateService<D>, protected yearModelService: NbCalendarYearModelService<D>) {}
 
   ngOnInit() {
     if (!this.visibleDate) {

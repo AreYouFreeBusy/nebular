@@ -4,7 +4,7 @@
  * Licensed under the MIT License. See License.txt in the project root for license information.
  */
 
-import { Component, EventEmitter, Input, Output, Type } from '@angular/core';
+import { Component, EventEmitter, Input, Output, TemplateRef, Type } from '@angular/core';
 
 import {
   NbCalendarCell,
@@ -14,7 +14,6 @@ import {
   NbCalendarViewModeValues,
 } from '../calendar-kit/model';
 import { convertToBoolProperty, NbBooleanInput } from '../helpers';
-
 
 /**
  * Calendar component provides a capability to choose a date.
@@ -212,12 +211,12 @@ import { convertToBoolProperty, NbBooleanInput } from '../helpers';
       [showWeekNumber]="showWeekNumber"
       [weekNumberSymbol]="weekNumberSymbol"
       [firstDayOfWeek]="firstDayOfWeek"
+      [customNavigationTemplate]="customNavigationTemplate"
       (dateChange)="dateChange.emit($event)"
     ></nb-base-calendar>
   `,
 })
 export class NbCalendarComponent<D> {
-
   /**
    * Defines if we should render previous and next months
    * in the current month view.
@@ -303,6 +302,11 @@ export class NbCalendarComponent<D> {
    * `undefined` means that default locale setting will be used.
    * */
   @Input() firstDayOfWeek: number | undefined;
+
+  /**
+   *  A custom template to use to replace the navigation in the header
+   */
+  @Input() customNavigationTemplate: TemplateRef<any>;
 
   /**
    * Emits date when selected.
