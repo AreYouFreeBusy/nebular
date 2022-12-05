@@ -13,7 +13,7 @@ import {
   NbListModule,
   NbPopoverModule,
   NbTabsetModule,
-} from '@nebular/theme';
+} from '@areyoufreebusy/theme';
 import { DynamicToAddComponent, PopoverListComponent, PopoverTabsComponent } from './components/dynamic.components';
 import { PopoverRoutingModule } from './popover-routing.module';
 import { PopoverCustomComponentComponent } from './popover-custom-component.component';
