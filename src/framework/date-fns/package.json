@@ -1,17 +1,17 @@
 {
-  "name": "@nebular/date-fns",
+  "name": "@areyoufreebusy/date-fns",
   "version": "13.0.0",
-  "description": "@nebular/date-fns",
+  "description": "@areyoufreebusy/date-fns",
   "author": "akveo",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/akveo/nebular.git"
+    "url": "git+https://github.com/areyoufreebusy/nebular.git"
   },
   "bugs": {
-    "url": "https://github.com/akveo/nebular/issues"
+    "url": "https://github.com/areyoufreebusy/nebular/issues"
   },
-  "homepage": "https://github.com/akveo/nebular#readme",
+  "homepage": "https://github.com/areyoufreebusy/nebular#readme",
   "keywords": [
     "angular",
     "typescript",
@@ -21,7 +21,7 @@
     "nebular"
   ],
   "peerDependencies": {
-    "@nebular/theme": "13.0.0",
+    "@areyoufreebusy/theme": "13.0.0",
     "date-fns": "^2.0.0"
   },
   "dependencies": {
