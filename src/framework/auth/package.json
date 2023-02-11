@@ -1,6 +1,6 @@
 {
   "name": "@areyoufreebusy/auth",
-  "version": "10.0.0",
+  "version": "10.0.2",
   "description": "@areyoufreebusy/auth",
   "author": "akveo",
   "license": "MIT",
@@ -28,7 +28,7 @@
     "@angular/core": "^14.0.0",
     "@angular/router": "^14.0.0",
     "@angular/forms": "^14.0.0",
-    "@areyoufreebusy/theme": "10.0.0",
+    "@areyoufreebusy/theme": "10.0.2",
     "rxjs": "^6.5.3 || ^7.4.0"
   },
   "dependencies": {
