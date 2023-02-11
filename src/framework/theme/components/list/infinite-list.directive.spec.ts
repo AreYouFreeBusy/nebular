@@ -93,7 +93,7 @@ describe('Directive: NbScrollDirective', () => {
   beforeEach(() => {
     fixture = TestBed.configureTestingModule({
       imports: [
-        RouterModule.forRoot([], { relativeLinkResolution: 'legacy' }),
+        RouterModule.forRoot([], {}),
         NbThemeModule.forRoot(),
         NbLayoutModule,
         NbListModule,

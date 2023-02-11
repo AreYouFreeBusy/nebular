@@ -1,7 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
-import { RouterLinkWithHref } from '@angular/router';
+import { RouterLink } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 
 import {
@@ -59,7 +59,7 @@ describe('NbActionComponent link with icon', () => {
     actionComponent.link = '.';
     fixture.detectChanges();
 
-    const link = fixture.debugElement.query(By.directive(RouterLinkWithHref));
+    const link = fixture.debugElement.query(By.directive(RouterLink));
     expect(link).not.toBeNull();
   });
 
@@ -78,7 +78,7 @@ describe('NbActionComponent link with icon', () => {
     actionComponent.href = '/';
     fixture.detectChanges();
 
-    const link = fixture.debugElement.query(By.directive(RouterLinkWithHref));
+    const link = fixture.debugElement.query(By.directive(RouterLink));
     expect(link).toBeNull();
   });
 
@@ -96,7 +96,7 @@ describe('NbActionComponent link with icon', () => {
     actionComponent.link = '.';
     fixture.detectChanges();
 
-    const icon = fixture.debugElement.query(By.directive(RouterLinkWithHref)).query(By.directive(NbIconComponent));
+    const icon = fixture.debugElement.query(By.directive(RouterLink)).query(By.directive(NbIconComponent));
 
     expect(icon).not.toBeNull();
     expect(icon.componentInstance.icon).toEqual(ICON_NAME);
@@ -130,7 +130,7 @@ describe('NbActionComponent link with icon', () => {
     actionComponent.title = title;
     fixture.detectChanges();
 
-    const link = fixture.debugElement.query(By.directive(RouterLinkWithHref));
+    const link = fixture.debugElement.query(By.directive(RouterLink));
 
     expect(link.properties.title).toEqual(title);
   });
