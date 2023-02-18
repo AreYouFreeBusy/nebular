@@ -13,6 +13,7 @@ import {
   NbCalendarViewMode,
   NbCalendarSizeValues,
   NbCalendarViewModeValues,
+  NbCalendarDay,
 } from '../calendar-kit/model';
 import { NbDateService } from '../calendar-kit/services/date.service';
 import { convertToBoolProperty, NbBooleanInput } from '../helpers';
@@ -115,6 +116,7 @@ export class NbBaseCalendarComponent<D, T> implements OnInit {
    * A custom template to use to replace the navigation in the header
    */
   @Input() customNavigationTemplate: TemplateRef<any>;
+  @Input() customWeekColumn: NbCalendarDay[];
 
   /**
    * Emits date when selected.

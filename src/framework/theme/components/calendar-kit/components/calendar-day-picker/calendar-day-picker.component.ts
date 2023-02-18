@@ -18,7 +18,7 @@ import {
 
 import { NbCalendarMonthModelService } from '../../services/calendar-month-model.service';
 import { NbCalendarDayCellComponent } from './calendar-day-cell.component';
-import { NbCalendarCell, NbCalendarSize, NbCalendarSizeValues } from '../../model';
+import { NbCalendarCell, NbCalendarDay, NbCalendarSize, NbCalendarSizeValues } from '../../model';
 import { convertToBoolProperty, NbBooleanInput } from '../../../helpers';
 
 
@@ -34,7 +34,7 @@ import { convertToBoolProperty, NbBooleanInput } from '../../../helpers';
                               [weekNumberSymbol]="weekNumberSymbol">
     </nb-calendar-week-numbers>
     <div class="days-container">
-      <nb-calendar-days-names [size]="size"></nb-calendar-days-names>
+      <nb-calendar-days-names [size]="size" [customWeekColumn]="customWeekColumn"></nb-calendar-days-names>
       <nb-calendar-picker
           [data]="weeks"
           [visibleDate]="visibleDate"
@@ -73,6 +73,7 @@ export class NbCalendarDayPickerComponent<D, T> implements OnChanges {
    * Maximum available date for selection.
    * */
   @Input() max: D;
+  @Input() customWeekColumn: NbCalendarDay[];
 
   /**
    * Predicate that decides which cells will be disabled.

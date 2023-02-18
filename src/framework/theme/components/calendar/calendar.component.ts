@@ -12,6 +12,7 @@ import {
   NbCalendarViewMode,
   NbCalendarSizeValues,
   NbCalendarViewModeValues,
+  NbCalendarDay,
 } from '../calendar-kit/model';
 import { convertToBoolProperty, NbBooleanInput } from '../helpers';
 
@@ -212,6 +213,7 @@ import { convertToBoolProperty, NbBooleanInput } from '../helpers';
       [showWeekNumber]="showWeekNumber"
       [weekNumberSymbol]="weekNumberSymbol"
       [customNavigationTemplate]="customNavigationTemplate"
+      [customWeekColumn]="customWeekColumn"
       (dateChange)="dateChange.emit($event)"
     ></nb-base-calendar>
   `,
@@ -302,6 +304,7 @@ export class NbCalendarComponent<D> {
    * A custom template to use to replace the navigation in the header
    */
   @Input() customNavigationTemplate: TemplateRef<any>;
+  @Input() customWeekColumn: NbCalendarDay[];
 
   /**
    * Emits date when selected.
