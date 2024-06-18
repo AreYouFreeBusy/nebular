@@ -6,12 +6,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/areyoufreebusy/nebular.git"
+    "url": "git+https://github.com/areyoufreebusy/areyoufreebusy.git"
   },
   "bugs": {
-    "url": "https://github.com/areyoufreebusy/nebular/issues"
+    "url": "https://github.com/areyoufreebusy/areyoufreebusy/issues"
   },
-  "homepage": "https://github.com/areyoufreebusy/nebular#readme",
+  "homepage": "https://github.com/areyoufreebusy/areyoufreebusy#readme",
   "keywords": [
     "angular",
     "typescript",
