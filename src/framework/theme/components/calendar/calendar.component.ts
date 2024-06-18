@@ -305,6 +305,7 @@ export class NbCalendarComponent<D> {
 
   /**
    *  A custom template to use to replace the navigation in the header
+   * A custom template to use to replace the navigation in the header
    */
   @Input() customNavigationTemplate: TemplateRef<any>;
 

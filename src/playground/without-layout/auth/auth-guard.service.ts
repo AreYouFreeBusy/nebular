@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { tap } from 'rxjs/operators';
-import { CanActivate, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { NbAuthService } from '@areyoufreebusy/auth';
 
 @Injectable()
