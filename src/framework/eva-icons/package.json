@@ -1,6 +1,6 @@
 {
   "name": "@areyoufreebusy/eva-icons",
-  "version": "13.0.0",
+  "version": "14.0.0",
   "description": "@areyoufreebusy/eva-icons",
   "author": "akveo",
   "license": "MIT",
@@ -23,7 +23,7 @@
     "eva-icons"
   ],
   "peerDependencies": {
-    "@areyoufreebusy/theme": "13.0.0",
+    "@areyoufreebusy/theme": "14.0.0",
     "eva-icons": "^1.1.3"
   },
   "dependencies": {
